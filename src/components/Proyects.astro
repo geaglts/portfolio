@@ -1,0 +1,15 @@
+---
+import Card from "./Card.astro";
+import projects from "~/data/projects.json";
+---
+
+<section class="mt-4" id="Projects">
+  <h2 class="text-white text-center py-4 text-3xl font-bold">Mis Proyectos</h2>
+  <ul class="grid gap-3">{projects.map((project) => <Card {...project} />)}</ul>
+</section>
+
+<style>
+  ul {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+</style>

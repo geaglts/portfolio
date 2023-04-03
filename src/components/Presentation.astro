@@ -1,0 +1,58 @@
+---
+import JavaScript from "~/icons/JavaScript.astro";
+---
+
+<section class="container mt-4">
+  <div></div>
+  <div class="info">
+    <h1 class="title text-4xl">
+      <i>
+        <span class="text-2xl">Hola! Me llamo</span>
+        Miguel Angel
+      </i>
+    </h1>
+    <div class="flex items-center gap-3">
+      <JavaScript />
+      <p>Full Stack Developer</p>
+    </div>
+    <p class="description text-xl">
+      <i
+        >Soy pasante de Ingeniería en Sistemas con 3 años de experiencia como
+        desarrollador Fullstack con JavaScript también me gusta dibujar a veces.
+        <br />
+        <a href="#Projects"
+          ><span class="underline font-bold">Mira mis proyectos</span> ✨</a
+        ></i
+      >
+    </p>
+  </div>
+</section>
+
+<style>
+  .container {
+    color: var(--color-pink);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    width: 381.25px;
+  }
+
+  .title {
+    position: relative;
+    font-weight: 300;
+  }
+
+  .title span {
+    color: var(--color-blue);
+    position: absolute;
+    top: -35px;
+  }
+
+  .description a {
+    color: var(--color-blue);
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+import Link, { LINK_COLORS } from "~/common/Link.astro";
+import Logo from "~/icons/Logo.astro";
+---
+
+<header class="py-4">
+  <section class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <Logo />
+      <Link to="https://github.com/geaglts">GitHub</Link>
+      <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
+      <Link
+        to="https://drive.google.com/file/d/1EypAKypBrBp8nrvYl33tpjg45rvsSPqz/view"
+      >
+        CV
+      </Link>
+      <Link to="#Projects" blank={false}>Proyectos</Link>
+    </div>
+    <div>
+      <Link color={LINK_COLORS.BLUE} to="mailto:geaglts@gmail.com">
+        geaglts@gmail.com
+      </Link>
+    </div>
+  </section>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #1a1a1a9a;
+    backdrop-filter: blur(12px);
+    z-index: 1;
+  }
+
+  header > section {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+</style>

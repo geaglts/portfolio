@@ -1,0 +1,83 @@
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  width="25.34px"
+  height="25.34px"
+  viewBox="0 0 25.34 25.34"
+  style="enable-background:new 0 0 25.34 25.34;"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      clip-path: url(#SVGID_2_);
+    }
+    .st1 {
+      fill: #e7d5d5;
+    }
+    .st2 {
+      clip-path: url(#SVGID_4_);
+    }
+    .st3 {
+      clip-path: url(#SVGID_6_);
+    }
+    .st4 {
+      clip-path: url(#SVGID_8_);
+    }
+  </style>
+  <defs> </defs>
+  <g id="goto_2_">
+    <g id="Group_14_1_" transform="translate(0 1.286)">
+      <g>
+        <defs>
+          <path
+            id="SVGID_1_"
+            d="M0.54,0C0.24,0,0,0.24,0,0.54v22.98c0,0.3,0.24,0.54,0.54,0.54c0,0,0,0,0,0h22.98
+					c0.3,0,0.54-0.24,0.54-0.54l0,0V13.49c0-0.3-0.24-0.54-0.54-0.54l0,0h-1.98c-0.39,0-0.7,0.31-0.7,0.7v0v7.19H3.21V3.21h7.19
+					c0.39,0,0.7-0.31,0.7-0.7V0.54c0-0.3-0.24-0.54-0.54-0.54l0,0L0.54,0z"
+          ></path>
+        </defs>
+        <use xlink:href="#SVGID_1_" style="overflow:visible;fill:#E7D5D5;"
+        ></use>
+        <clipPath id="SVGID_2_">
+          <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+        </clipPath>
+        <g id="Group_13_1_" class="st0">
+          <rect
+            id="Rectangle_18_1_"
+            y="0"
+            class="st1"
+            width="24.05"
+            height="24.05"></rect>
+        </g>
+      </g>
+    </g>
+    <g id="Group_16_1_" transform="translate(6.03)">
+      <g>
+        <defs>
+          <path
+            id="SVGID_3_"
+            d="M9.92,0C9.73,0,9.57,0.16,9.57,0.35v2.52c0,0.19,0.16,0.35,0.35,0.35h4.02L0.47,16.69
+					c-0.63,0.63-0.63,1.65,0,2.27s1.65,0.63,2.27,0L16.1,5.61v3.78c0,0.19,0.16,0.35,0.35,0.35h2.52c0.19,0,0.35-0.16,0.35-0.35
+					V0.35c0-0.19-0.16-0.35-0.35-0.35H9.92z"
+          ></path>
+        </defs>
+        <use xlink:href="#SVGID_3_" style="overflow:visible;fill:#E7D5D5;"
+        ></use>
+        <clipPath id="SVGID_4_">
+          <use xlink:href="#SVGID_3_" style="overflow:visible;"></use>
+        </clipPath>
+        <g id="Group_15_1_" class="st2">
+          <rect
+            id="Rectangle_19_1_"
+            x="-0.16"
+            class="st1"
+            width="19.47"
+            height="19.59"></rect>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+---
+export enum LINK_COLORS {
+  BLUE = "blue",
+  PINK = "pink",
+}
+
+export interface Props {
+  to: string;
+  color?: LINK_COLORS;
+  blank?: boolean;
+}
+
+const { to, blank = true, color = LINK_COLORS.PINK } = Astro.props;
+---
+
+<a
+  href={to}
+  class={`${color} font-bold text-xl underline trasition duration-500 ease-in-out hover:opacity-70`}
+  target={blank ? "_blank" : "_self"}
+>
+  <slot />
+</a>
+
+<style>
+  .blue {
+    color: var(--color-blue);
+  }
+  .pink {
+    color: var(--color-pink);
+  }
+</style>
