@@ -1,25 +1,51 @@
 ---
 import Link, { LINK_COLORS } from "~/common/Link.astro";
 import Logo from "~/icons/Logo.astro";
+import MenuBurguer from "~/icons/MenuBurguer.astro";
 ---
 
-<header class="py-4">
-  <section class="flex items-center justify-between">
+<section id="full-menu" class="full-menu w-full h-screen left-0 top-0 hidden">
+  <h1>Hola</h1>
+  <button id="close-menu-button" class="bg-red-600 text-white py-1 px-3 rounded"
+    >cerrar</button
+  >
+</section>
+<header>
+  <section class="text-center text-black text-lg bg-red-100 py-3 mb-3">
+    <p>Este portafolio sigue en construcción 🏗️</p>
+    <p>
+      Pero puedes ver alguno de mis <a
+        class="underline text-blue-500 font-bold"
+        href="#projects">proyectos</a
+      > 🙌
+    </p>
+  </section>
+  <section class="top-menu flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <Logo />
-      <Link to="https://github.com/geaglts">GitHub</Link>
-      <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
-      <Link
-        to="https://drive.google.com/file/d/1EypAKypBrBp8nrvYl33tpjg45rvsSPqz/view"
-      >
-        CV
-      </Link>
-      <Link to="#Projects" blank={false}>Proyectos</Link>
+      <section class="flex items-center gap-3">
+        <Logo />
+      </section>
+      <section class="desktop-links flex items-center gap-3">
+        <Link to="https://github.com/geaglts">GitHub</Link>
+        <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
+        <Link to="https://www.instagram.com/gxlts.art/">IG</Link>
+        <Link
+          to="https://drive.google.com/file/d/1EypAKypBrBp8nrvYl33tpjg45rvsSPqz/view"
+        >
+          CV
+        </Link>
+        <Link to="#projects" blank={false}>Proyectos</Link>
+      </section>
     </div>
     <div>
-      <Link color={LINK_COLORS.BLUE} to="mailto:geaglts@gmail.com">
-        geaglts@gmail.com
-      </Link>
+      <section class="desktop-links">
+        <Link color={LINK_COLORS.BLUE} to="mailto:geaglts@gmail.com">
+          geaglts@gmail.com
+        </Link>
+      </section>
+      <section class="mobile-links">
+        <MenuBurguer id="open-menu-button" />
+      </section>
     </div>
   </section>
 </header>
@@ -27,16 +53,74 @@ import Logo from "~/icons/Logo.astro";
 <style>
   header {
     position: fixed;
-    width: 100%;
     left: 0;
     top: 0;
+    width: 100%;
     background-color: #1a1a1a9a;
     backdrop-filter: blur(12px);
     z-index: 1;
   }
 
-  header > section {
+  .top-menu {
     max-width: 980px;
     margin: 0 auto;
   }
+
+  .full-menu {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12px);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .mobile-links {
+    display: none;
+  }
+
+  @media (max-width: 1080px) {
+    .top-menu {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .desktop-links {
+      display: none;
+    }
+    .mobile-links {
+      display: block;
+    }
+  }
 </style>
+
+<script>
+  const $ = (element: string) => {
+    return document.querySelector(element) || document.createElement("div");
+  };
+
+  const fullMenu = $("#full-menu");
+  const openMenuButton = $("#open-menu-button");
+  const closeMenuButton = $("#close-menu-button");
+
+  openMenuButton.addEventListener("click", (evt) => {
+    fullMenu.classList.add("show");
+    fullMenu.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+
+  closeMenuButton.addEventListener("click", (evt) => {
+    fullMenu.classList.add("hidden");
+    fullMenu.classList.remove("show");
+    document.body.style.overflow = "auto";
+  });
+</script>
