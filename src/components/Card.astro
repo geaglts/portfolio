@@ -38,6 +38,12 @@ const { github, deploy, title, description, technologies } = Astro.props;
     background-color: var(--color-gray);
     display: flex;
     flex-direction: column;
+    transition: all 350ms ease-in;
+  }
+
+  li:hover {
+    animation: rotate 1.2s linear infinite;
+    background-color: transparent;
   }
 
   .link {
@@ -64,5 +70,19 @@ const { github, deploy, title, description, technologies } = Astro.props;
 
   .technologies {
     color: var(--color-light-gray);
+  }
+
+  @keyframes rotate {
+    0%,
+    50%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(1deg);
+    }
+    75% {
+      transform: rotate(-1deg);
+    }
   }
 </style>
