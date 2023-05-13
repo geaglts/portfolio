@@ -2,16 +2,27 @@
 import Link, { LINK_COLORS } from "~/common/Link.astro";
 import Logo from "~/icons/Logo.astro";
 import MenuBurguer from "~/icons/MenuBurguer.astro";
+import CloseIcon from "~/icons/Close.astro";
 ---
 
 <section id="full-menu" class="full-menu w-full h-screen left-0 top-0 hidden">
-  <h1>Hola</h1>
-  <button id="close-menu-button" class="bg-red-600 text-white py-1 px-3 rounded"
-    >cerrar</button
-  >
+  <section class="flex justify-end items-center py-3 px-2">
+    <CloseIcon id="close-menu-button" />
+  </section>
+  <section class="text-center flex flex-col gap-3">
+    <Link to="#projects" blank={false}>Proyectos</Link>
+    <Link to="https://github.com/geaglts">GitHub</Link>
+    <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
+    <Link to="https://www.instagram.com/gxlts.art/">IG</Link>
+    <Link
+      to="https://drive.google.com/file/d/1EypAKypBrBp8nrvYl33tpjg45rvsSPqz/view"
+    >
+      CV
+    </Link>
+  </section>
 </section>
 <header>
-  <section class="text-center text-black text-lg bg-red-100 py-3 mb-3">
+  <section class="text-center text-black text-lg bg-red-100 py-3 px-2 mb-3">
     <p>Este portafolio sigue en construcción 🏗️</p>
     <p>
       Pero puedes ver alguno de mis <a

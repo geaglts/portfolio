@@ -3,7 +3,6 @@ import JavaScript from "~/icons/JavaScript.astro";
 ---
 
 <section class="container mt-4">
-  <div></div>
   <div class="info text-center">
     <h1 class="title text-4xl">
       <i>
@@ -55,5 +54,11 @@ import JavaScript from "~/icons/JavaScript.astro";
 
   .description a {
     color: var(--color-blue);
+  }
+
+  @media (max-height: 720px) {
+    .container {
+      margin-top: 60px;
+    }
   }
 </style>
