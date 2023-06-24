@@ -1,7 +1,7 @@
 [
   {
     "github": "https://github.com/geaglts/easy-notes",
-    "deploy": "https://riapa.tk",
+    "deploy": "https://riapa.gealts.dev",
     "title": "Hriaapa'",
     "description": "App para guardar notas encriptadas.",
     "technologies": "ReactJS Express PostgreSQL Redux SASS"
