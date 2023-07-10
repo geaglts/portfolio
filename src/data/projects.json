@@ -19,5 +19,12 @@
     "title": "Key Generator",
     "description": "Generador de claves con su propia API.",
     "technologies": "Express Pug Babel"
+  },
+  {
+    "github": "https://github.com/geaglts/sql-generator",
+    "deploy": "https://geaglts.github.io/sql-generator/",
+    "title": "SQL Generator",
+    "description": "Interprete que genera código SQL dada una descripción en español.",
+    "technologies": "HTML, CSS, JavaScript"
   }
 ]
