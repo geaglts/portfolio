@@ -8,7 +8,7 @@
   },
   {
     "github": "https://github.com/geaglts/filecrypt",
-    "deploy": "https://filecrypt.tk",
+    "deploy": "https://filecrypt.gealts.dev/",
     "title": "FileCrypt",
     "description": "App para encriptar y desencriptar archivos de texto plano.",
     "technologies": "ReactJS SASS Redux Redux Toolkit"
