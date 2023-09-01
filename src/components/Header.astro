@@ -3,6 +3,7 @@ import Link, { LINK_COLORS } from "~/common/Link.astro";
 import Logo from "~/icons/Logo.astro";
 import MenuBurguer from "~/icons/MenuBurguer.astro";
 import CloseIcon from "~/icons/Close.astro";
+import menuItems from "~/data/menu.json";
 ---
 
 <section id="full-menu" class="full-menu w-full h-screen left-0 top-0 hidden">
@@ -10,15 +11,16 @@ import CloseIcon from "~/icons/Close.astro";
     <CloseIcon id="close-menu-button" />
   </section>
   <section class="text-center flex flex-col gap-3">
-    <Link to="#projects" blank={false}>Proyectos</Link>
-    <Link to="https://github.com/geaglts">GitHub</Link>
-    <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
-    <Link to="https://www.instagram.com/gxlts.art/">IG</Link>
-    <Link
-      to="https://drive.google.com/file/d/196dLbbZxIPJAAKODVFuqhgNRyoKkur9l/view"
-    >
-      CV
-    </Link>
+    {
+      menuItems.map((item) => {
+        const { to, title, props } = item;
+        return (
+          <Link to={to} {...props}>
+            {title}
+          </Link>
+        );
+      })
+    }
   </section>
 </section>
 <header>
@@ -37,15 +39,16 @@ import CloseIcon from "~/icons/Close.astro";
         <Logo />
       </section>
       <section class="desktop-links flex items-center gap-3">
-        <Link to="https://github.com/geaglts">GitHub</Link>
-        <Link to="https://www.linkedin.com/in/geaglts/">LinkedIn</Link>
-        <Link to="https://www.instagram.com/gxlts.art/">IG</Link>
-        <Link
-          to="https://drive.google.com/file/d/1EypAKypBrBp8nrvYl33tpjg45rvsSPqz/view"
-        >
-          CV
-        </Link>
-        <Link to="#projects" blank={false}>Proyectos</Link>
+        {
+          menuItems.map((item) => {
+            const { to, title, props } = item;
+            return (
+              <Link to={to} {...props}>
+                {title}
+              </Link>
+            );
+          })
+        }
       </section>
     </div>
     <div>

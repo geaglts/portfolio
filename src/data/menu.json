@@ -1,0 +1,15 @@
+[
+  { "title": "Proyectos", "to": "#projects", "props": { "blank": false } },
+  { "title": "GitHub", "to": "https://github.com/geaglts", "props": {} },
+  {
+    "title": "LinkedIn",
+    "to": "https://www.linkedin.com/in/geaglts/",
+    "props": {}
+  },
+  { "title": "IG", "to": "https://www.instagram.com/gxlts.art/", "props": {} },
+  {
+    "title": "CV",
+    "to": "https://drive.google.com/file/d/196dLbbZxIPJAAKODVFuqhgNRyoKkur9l/view",
+    "props": {}
+  }
+]
