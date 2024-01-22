@@ -29,28 +29,28 @@ import data from "~/data/y.json";
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
 
-    .title {
-      font-size: 22pt;
-      color: white;
-      text-align: center;
-    }
+  .dark-container .title {
+    font-size: 22pt;
+    color: white;
+    text-align: center;
   }
 
   .images-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+  }
 
-    img {
-      border: 8px solid white;
-      border-bottom: 50px solid white;
-      transition: all 350ms;
+  .images-container img {
+    border: 8px solid white;
+    border-bottom: 50px solid white;
+    transition: all 350ms;
+  }
 
-      &:hover {
-        transition: all 250ms;
-        transform: scale(1.1);
-      }
-    }
+  .images-container img:hover {
+    transition: all 250ms;
+    transform: scale(1.1);
   }
 </style>
