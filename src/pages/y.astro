@@ -1,0 +1,56 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import data from "~/data/y.json";
+---
+
+<Layout title="Hola Yami">
+  <section class="dark-container">
+    <h1 class="title">Miraaa 💗</h1>
+    <div class="images-container">
+      {
+        data.map((image) => {
+          return (
+            <a href={image.driveLink} target="_blank">
+              <img src={image.thumbnail} alt="Mua mua mua" />
+            </a>
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  html {
+    background-color: #222;
+  }
+
+  .dark-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .title {
+      font-size: 22pt;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    img {
+      border: 8px solid white;
+      border-bottom: 50px solid white;
+      transition: all 350ms;
+
+      &:hover {
+        transition: all 250ms;
+        transform: scale(1.1);
+      }
+    }
+  }
+</style>
