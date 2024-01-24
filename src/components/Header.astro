@@ -24,15 +24,6 @@ import menuItems from "~/data/menu.json";
   </section>
 </section>
 <header>
-  <section class="text-center text-black text-lg bg-red-100 py-3 px-2 mb-3">
-    <p>Este portafolio sigue en construcción 🏗️</p>
-    <p>
-      Pero puedes ver alguno de mis <a
-        class="underline text-blue-500 font-bold"
-        href="#projects">proyectos</a
-      > 🙌
-    </p>
-  </section>
   <section class="top-menu flex items-center justify-between">
     <div class="flex items-center gap-3">
       <section class="flex items-center gap-3">
@@ -43,7 +34,7 @@ import menuItems from "~/data/menu.json";
           menuItems.map((item) => {
             const { to, title, props } = item;
             return (
-              <Link to={to} {...props}>
+              <Link to={to} color={LINK_COLORS.BLUE} {...props}>
                 {title}
               </Link>
             );
@@ -70,7 +61,7 @@ import menuItems from "~/data/menu.json";
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #1a1a1a9a;
+    padding-top: 16px;
     backdrop-filter: blur(12px);
     z-index: 1;
   }
@@ -81,7 +72,7 @@ import menuItems from "~/data/menu.json";
   }
 
   .full-menu {
-    background: rgba(0, 0, 0, 0.9);
+    /* background: rgba(0, 0, 0, 0.9); */
     backdrop-filter: blur(12px);
   }
 
