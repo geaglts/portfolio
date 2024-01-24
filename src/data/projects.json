@@ -4,21 +4,21 @@
     "deploy": "https://riapa.gealts.dev",
     "title": "Hriaapa'",
     "description": "App para guardar notas encriptadas.",
-    "technologies": "ReactJS Express PostgreSQL Redux SASS"
+    "technologies": "ReactJS, Express, PostgreSQL, Redux, SASS"
   },
   {
     "github": "https://github.com/geaglts/filecrypt",
     "deploy": "https://filecrypt.gealts.dev/",
     "title": "FileCrypt",
     "description": "App para encriptar y desencriptar archivos de texto plano.",
-    "technologies": "ReactJS SASS Redux Redux Toolkit"
+    "technologies": "ReactJS, SASS, Redux, Redux, Toolkit"
   },
   {
     "github": "https://github.com/geaglts/key-generator-api",
     "deploy": "https://key-generator.fly.dev/",
     "title": "Key Generator",
     "description": "Generador de claves con su propia API.",
-    "technologies": "Express Pug Babel"
+    "technologies": "Express, Pug, Babel"
   },
   {
     "github": "https://github.com/geaglts/sql-generator",

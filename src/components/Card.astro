@@ -13,7 +13,7 @@ export interface Props {
 const { github, deploy, title, description, technologies } = Astro.props;
 ---
 
-<li class="rounded-md p-4 w-full">
+<li class="rounded-md p-4 w-full flex-col gap-2">
   <section class="flex gap-3">
     <a class="link" href={github} target="_blank">
       <img src={GithubIcon} alt="Link a GitHub" />
@@ -22,12 +22,13 @@ const { github, deploy, title, description, technologies } = Astro.props;
       <img src={GotoIcon} alt="Link al despliegue" />
     </a>
   </section>
-  <section class="mt-2">
+  <section class="info">
     <h2 class="font-bold text-2xl">{title}</h2>
     <p class="description text-lg">{description}</p>
   </section>
-  <section class="footer mt-2">
-    <p class="technologies font-bold text-sm" title={technologies}>
+  <section class="footer">
+    <h2 class="font-bold text-gray-600">Tecnologias utilizadas:</h2>
+    <p class="technologies font-bold" title={technologies}>
       {technologies}
     </p>
   </section>
@@ -35,10 +36,11 @@ const { github, deploy, title, description, technologies } = Astro.props;
 
 <style>
   li {
-    background-color: var(--color-gray);
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     transition: all 350ms ease-in;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
   }
 
   li:hover {
@@ -60,12 +62,17 @@ const { github, deploy, title, description, technologies } = Astro.props;
     transform: scale(1.1);
   }
 
+  .info {
+    height: 100px;
+  }
+
   h2 {
-    color: var(--color-light-blue);
+    color: var(--color-blue);
   }
 
   .description {
-    color: var(--color-white);
+    color: var(--color-dark);
+    line-height: 1.2;
   }
 
   .technologies {
